@@ -1,5 +1,5 @@
 
-const stateData = [
+export const stateData = [
   { hash: '#Kimwoojin',       text: '김우진'  },
   { hash: '#Kimhyun',         text: '김현'    },
   { hash: '#Bangseunhee',     text: '방승희'  },
@@ -18,7 +18,7 @@ const stateData = [
   { hash: '#Choieunchul',     text: '최은철'  },
   { hash: '#Hongmoongi',      text: '홍문기'  },
 ];
-const strData = [{
+export const strData = [{
   str1 : `Lorem ipsum dolor sit amet consectetur. Mauris vitae nullam suspendisse ut amet quis nibh pellentesque. Non ut neque pellentesque nisl imperdiet turpis nulla ut. Ut id massa eu eu rhoncus elementum adipiscing metus. Mi risus nulla phasellus nisl molestie dignissim risus arcu elementum. Habitasse tortor tempus sed enim lectus duis volutpat. Pellentesque lacinia suspendisse sit malesuada sit a faucibus sed mattis. Egestas mauris id mattis id pulvinar nunc euismod id diam. Amet amet aliquet pharetra sed nam ipsum aenean dis tempor. Nisl in egestas cursus sagittis sed in integer. Sed sed cursus tempor porttitor. Cras viverra arcu sed laoreet volutpat enim sem sapien. Est nibh velit eu ipsum praesent vitae vestibulum aliquam.
   Sagittis nisi faucibus libero luctus tincidunt. Porttitor laoreet tellus maecenas tempor. Vehicula ut vulputate lorem congue. Eget dignissim aliquam integer tincidunt massa nulla duis mauris. Pellentesque aenean sit mauris morbi.
   Dolor non aliquam elit risus elementum dictumst. Eu egestas turpis diam dictum. Dictumst leo senectus velit porta. Pretium tortor velit nulla sit ipsum vel sagittis. Eget elit donec sed amet vel in mattis aenean nibh. Fermentum et ac purus diam sit erat in vitae tellus. In at sit ornare fermentum. Risus blandit amet eget id.`,
@@ -67,7 +67,7 @@ export function hashCompo(index){
           createElement("p", {}, strData[0].str1),
         ),
         createElement("div", { class: "middle" },
-          createElement("h1", {}, stateData[index].text + "장정"),
+          createElement("h1", {}, stateData[index].text + " 장정"),
           createElement("p", {}, strData[0].str2),
         ),
         createElement("div", { class: "bottom" },
