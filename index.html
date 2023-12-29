@@ -22,7 +22,6 @@
 
     console.log(stateData.length)
 
-
     const div =
       createElement("div", { id: "bigcont" },
         createElement("div", { id: "leftside" }, component(stateData)),
@@ -39,6 +38,8 @@
       middle.innerHTML = ""
 
       switch (hash) {
+
+
         case `${stateData[0].hash.substr(1)}` :
           hashCompo(0)
         break;
