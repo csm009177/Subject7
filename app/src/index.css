@@ -42,6 +42,42 @@ a {
   height: 100vh;
   margin: auto;
   margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+#boardHead{
+  width: 75vw;
+  height: 30vh;
+  margin: auto;
+  margin: 0;
+  padding:2vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+
+#boardBody{
+  width: 75vw;
+  height: 40vh;
+  margin: auto;
+  margin: 0;
+  padding:2vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+#boardFoot{
+  width: 75vw;
+  height: 30vh;
+  margin: auto;
+  margin: 0;
   padding:2vw;
   display: flex;
   box-sizing: border-box;
