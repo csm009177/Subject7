@@ -22,7 +22,6 @@ a {
   width: 25vw;
   height: 100vh;
 }
-
 #sideUl {
   margin: auto;
   margin: 0;
@@ -34,13 +33,19 @@ a {
   flex-direction: column;
   justify-content: space-between;
   text-decoration-line: none;
-}
-
-.sideMenu {
-  text-decoration-line: none;
+  text-align: center;
+  list-style: none;
 }
 
 #board {
   width: 75vw;
   height: 100vh;
+  margin: auto;
+  margin: 0;
+  padding:2vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
 }
