@@ -67,7 +67,7 @@ export function hashCompo(index){
           createElement("p", {}, strData[0].str1),
         ),
         createElement("div", { class: "middle" },
-          createElement("h1", {}, stateData[index].text + " 장정"),
+          createElement("h1", {}, stateData[index].text + " 장점"),
           createElement("p", {}, strData[0].str2),
         ),
         createElement("div", { class: "bottom" },
