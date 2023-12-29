@@ -18,26 +18,34 @@
 <body>
   <div id="root"></div>
   <script type="module">
-      import { createElement, component, render } from './component.js'
+    import { createElement, component, render, hashCompo } from './component.js'
     const stateData = [
-      { hash: '#Kimwoojin', text: '김우진', content: "kimwoojin content"},
-      { hash: '#Kimhyun', text: '김현' , content: "kimwoojin content"},
-      { hash: '#Bangseunhee', text: '방승희' , content: "kimwoojin content"},
-      { hash: '#Byunhonyung', text: '변호녕' , content: "kimwoojin content"},
-      { hash: '#Sosamuel', text: '소사무엘' , content: "kimwoojin content"},
-      { hash: '#Songyoungjun', text: '송영준' , content: "kimwoojin content"},
-      { hash: '#Sindonghyun', text: '신동현' , content: "kimwoojin content"},
-      { hash: '#Ohseungmin', text: '오승민' , content: "kimwoojin content"},
-      { hash: '#Yuseungmin', text: '유승민' , content: "kimwoojin content"},
-      { hash: '#Yunjunhyun', text: '윤준현' , content: "kimwoojin content"},
-      { hash: '#Leemingu', text: '이민구' , content: "kimwoojin content"},
-      { hash: '#Leeyuan', text: '이유안' , content: "kimwoojin content"},
-      { hash: '#Leechayee', text: '이채이' , content: "kimwoojin content"},
-      { hash: '#Junngyoungsick', text: '정영식' , content: "kimwoojin content"},
-      { hash: '#Choisungmin', text: '최성민' , content: "kimwoojin content"},
-      { hash: '#Choieunchul', text: '최은철' , content: "kimwoojin content"},
-      { hash: '#Hongmoongi', text: '홍문기' , content: "kimwoojin content"},
+      { hash: '#Kimwoojin',       text: '김우진'  },
+      { hash: '#Kimhyun',         text: '김현'    },
+      { hash: '#Bangseunhee',     text: '방승희'  },
+      { hash: '#Byunhonyung',     text: '변호녕'  },
+      { hash: '#Sosamuel',        text: '소사무엘'},
+      { hash: '#Songyoungjun',    text: '송영준'  },
+      { hash: '#Sindonghyun',     text: '신동현'  },
+      { hash: '#Ohseungmin',      text: '오승민'  },
+      { hash: '#Yuseungmin',      text: '유승민'  },
+      { hash: '#Yunjunhyun',      text: '윤준현'  },
+      { hash: '#Leemingu',        text: '이민구'  },
+      { hash: '#Leeyuan',         text: '이유안'  },
+      { hash: '#Leechayee',       text: '이채이'  },
+      { hash: '#Junngyoungsick',  text: '정영식'  },
+      { hash: '#Choisungmin',     text: '최성민'  },
+      { hash: '#Choieunchul',     text: '최은철'  },
+      { hash: '#Hongmoongi',      text: '홍문기'  },
     ];
+    console.log(stateData.length)
+    const strData = [{
+      str1 : `Lorem ipsum dolor sit amet consectetur. Mauris vitae nullam suspendisse ut amet quis nibh pellentesque. Non ut neque pellentesque nisl imperdiet turpis nulla ut. Ut id massa eu eu rhoncus elementum adipiscing metus. Mi risus nulla phasellus nisl molestie dignissim risus arcu elementum. Habitasse tortor tempus sed enim lectus duis volutpat. Pellentesque lacinia suspendisse sit malesuada sit a faucibus sed mattis. Egestas mauris id mattis id pulvinar nunc euismod id diam. Amet amet aliquet pharetra sed nam ipsum aenean dis tempor. Nisl in egestas cursus sagittis sed in integer. Sed sed cursus tempor porttitor. Cras viverra arcu sed laoreet volutpat enim sem sapien. Est nibh velit eu ipsum praesent vitae vestibulum aliquam.
+      Sagittis nisi faucibus libero luctus tincidunt. Porttitor laoreet tellus maecenas tempor. Vehicula ut vulputate lorem congue. Eget dignissim aliquam integer tincidunt massa nulla duis mauris. Pellentesque aenean sit mauris morbi.
+      Dolor non aliquam elit risus elementum dictumst. Eu egestas turpis diam dictum. Dictumst leo senectus velit porta. Pretium tortor velit nulla sit ipsum vel sagittis. Eget elit donec sed amet vel in mattis aenean nibh. Fermentum et ac purus diam sit erat in vitae tellus. In at sit ornare fermentum. Risus blandit amet eget id.`,
+      str2 : `Lorem ipsum dolor sit amet consectetur. Consectetur morbi fames in id sit turpis eget lectus ut. Neque orci hendrerit scelerisque nam ac ac eu dui urna. Aliquet vulputate tortor odio ut. Turpis nam sagittis non iaculis. Eu purus mollis cursus sagittis sit. Tempor tempor tincidunt ac in. Ullamcorper eros ullamcorper tincidunt sagittis. Libero massa nec gravida libero. Volutpat orci bibendum morbi porta mauris pellentesque. Natoque gravida at penatibus vestibulum purus tristique mollis imperdiet amet. Sed magna dignissim luctus cras nulla. Ultrices sapien sed quis consectetur turpis fusce sem facilisis eget.`
+    }]
+
 
     const div =
       createElement("div", { id: "bigcont" },
@@ -52,34 +60,64 @@
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.substr(1);
       const middle = document.getElementById('middle')
-      // middle.innerHTML = ""
+      middle.innerHTML = ""
 
       switch (hash) {
+        case `${stateData[0].hash.substr(1)}` :
+          hashCompo(0)
+        break;
+        case `${stateData[1].hash.substr(1)}` :
+          hashCompo(1)
+        break;
+        case `${stateData[2].hash.substr(1)}` :
+          hashCompo(2)
+        break;
+        case `${stateData[3].hash.substr(1)}` :
+          hashCompo(3)
+        break;
+        case `${stateData[4].hash.substr(1)}` :
+          hashCompo(4)
+        break;
+        case `${stateData[5].hash.substr(1)}` :
+          hashCompo(5)
+        break;
+        case `${stateData[6].hash.substr(1)}` :
+          hashCompo(6)
+        break;
+        case `${stateData[7].hash.substr(1)}` :
+          hashCompo(7)
+        break;
+        case `${stateData[8].hash.substr(1)}` :
+          hashCompo(8)
+        break;
+        case `${stateData[9].hash.substr(1)}` :
+          hashCompo(9)
+        break;
+        case `${stateData[10].hash.substr(1)}` :
+          hashCompo(10)
+        break;
+        case `${stateData[11].hash.substr(1)}` :
+          hashCompo(11)
+        break;
+        case `${stateData[12].hash.substr(1)}` :
+          hashCompo(12)
+        break;
+        case `${stateData[13].hash.substr(1)}` :
+          hashCompo(13)
+        break;
+        case `${stateData[14].hash.substr(1)}` :
+          hashCompo(14)
+        break;
+        case `${stateData[15].hash.substr(1)}` :
+          hashCompo(15)
+        break;
+        case `${stateData[16].hash.substr(1)}` :
+          hashCompo(16)
+        break;
+        case `${stateData[17].hash.substr(1)}` :
+          hashCompo(17)
+        break;
 
-        case 'Kimwoojin':
-          const Kimwoojin =
-            createElement("div", { id: stateData[0].text, class:"middleCont" },
-              createElement("div", { class: "top" },
-                createElement("h1", {}, stateData[0].text),
-                createElement("p", {}, stateData[0].content),
-              ),
-              createElement("div", { class: "middle" },
-                createElement("h1", {}, stateData[0].text + "장정"),
-                createElement("p", {}, stateData[0].content),
-              ),
-              createElement("div", { class: "bottom" },
-                createElement("input", {id:"inputTag", placeholder:"write your name"}, ),
-                createElement("div", {}, "")
-              ),
-            )
-          middle.appendChild(render(Kimwoojin));
-          break;
-
-        // default:
-        //   const first =
-        //     createElement("div", {class:"middleCont"}, "first hash")
-        //   middle.appendChild(render(first));
-        //   break;
       }
     });
     // window.dispatchEvent(new Event('hashchange'));
@@ -87,7 +125,7 @@
 
   </script>
   <script>
-    
+
   </script>
 </body>
 

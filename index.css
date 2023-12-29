@@ -24,9 +24,7 @@
   text-decoration-line: none;
   color: #353535;
   font-family: Inter;
-  font-size: 12px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 
@@ -35,9 +33,7 @@
   height: 100vh;
   color: #353535;
   font-family: Inter;
-  font-size: 12px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   background: #E8E8E8;
 }
@@ -51,20 +47,24 @@
   height: 100vh;
 }
 
-.middle.top {
+.middleTop {
   width: 075vw;
-  height: 25vh;
+  /* height: 25vh; */
 }
 
 
-.middle.middle {
+.middleMiddle {
   width: 075vw;
-  height: 50vh;
+  /* height: 50vh; */
+}
+.middleBottom {
+  width: 075vw;
+  /* height: 25vh; */
 }
 
-.middle.bottom {
+.printTag {
   width: 075vw;
-  height: 25vh;
+  height: 15vh;
 }
 
 
