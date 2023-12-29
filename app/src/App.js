@@ -1,8 +1,8 @@
 import React from 'react';// import logo from './logo.svg';
 import "./App.css";
 import { SideComponent} from "./SideComponent";
-import Example from "./Example";
-import { stateData, strData } from './data';
+// import Example from "./Example";
+// import { stateData, strData } from './data';
 // import { HashLink } from 'react-router-hash-link';
 
 function App() {
