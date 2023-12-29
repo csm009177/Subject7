@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>comdocu</title>
+  <title>Roomate</title>
   <link rel="stylesheet" href="index.css" />
   <style>
     * {
@@ -48,12 +48,11 @@
     const root = document.getElementById('root');
     root.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
 
-    window.dispatchEvent(new Event('DOMContentLoaded'));
-    
+
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.substr(1);
       const middle = document.getElementById('middle')
-      middle.innerHTML = ""
+      // middle.innerHTML = ""
 
       switch (hash) {
 
@@ -70,21 +69,21 @@
               ),
               createElement("div", { class: "bottom" },
                 createElement("input", {id:"inputTag", placeholder:"write your name"}, ),
-                createElement("div", {}, `${document.getElementById("inputTag").value}`)
+                createElement("div", {}, "")
               ),
             )
           middle.appendChild(render(Kimwoojin));
           break;
 
-        default:
-          const first =
-            createElement("div", {},)
-          middle.appendChild(render(first));
-          break;
+        // default:
+        //   const first =
+        //     createElement("div", {class:"middleCont"}, "first hash")
+        //   middle.appendChild(render(first));
+        //   break;
       }
     });
     // window.dispatchEvent(new Event('hashchange'));
-
+    // window.dispatchEvent(new Event('DOMContentLoaded'));
 
   </script>
   <script>

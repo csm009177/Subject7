@@ -51,18 +51,18 @@
   height: 100vh;
 }
 
-.top {
+.middle.top {
   width: 075vw;
   height: 25vh;
 }
 
 
-.middle {
+.middle.middle {
   width: 075vw;
   height: 50vh;
 }
 
-.bottom {
+.middle.bottom {
   width: 075vw;
   height: 25vh;
 }
