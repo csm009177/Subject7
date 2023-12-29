@@ -49,6 +49,7 @@
     root.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
 
     window.dispatchEvent(new Event('DOMContentLoaded'));
+    
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.substr(1);
       const middle = document.getElementById('middle')
@@ -74,8 +75,7 @@
             )
           middle.appendChild(render(Kimwoojin));
           break;
-        hashComp(1)
-          break;
+
         default:
           const first =
             createElement("div", {},)
