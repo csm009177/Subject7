@@ -9,19 +9,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-#side {
-  width:25vw;
-  height:100vh;
-}
-#board {
-  width:75vw;
-  height:100vh;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+a {
+  height: auto;
+}
 
+#side {
+  width: 25vw;
+  height: 100vh;
+}
+
+#sideUl {
+  margin: auto;
+  margin: 0;
+  padding:2vw;
+  width: 25vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+
+.sideMenu {
+  text-decoration-line: none;
+}
+
+#board {
+  width: 75vw;
+  height: 100vh;
+}

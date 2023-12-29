@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import {SideComponent} from './Component';
+import {SideComponent} from './SideComponent';
 
 
 function App() {
