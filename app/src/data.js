@@ -1,7 +1,7 @@
 
 export const stateData = [
   { hash: '#Kimwoojin',     text: '김우진'  },
-  { hash: '#Kimhyun',       text: '김현'    },
+  { hash: '#Kimhyun',       text: '김 현'   },
   { hash: '#Bangseunhee',   text: '방승희'  },
   { hash: '#Byunhonyung',   text: '변호녕'  },
   { hash: '#Sosamuel',      text: '소사무엘'},

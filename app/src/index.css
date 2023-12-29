@@ -50,7 +50,7 @@ a {
 }
 #boardHead{
   width: 75vw;
-  height: 30vh;
+  height: 50vh;
   margin: auto;
   margin: 0;
   padding:2vw;
@@ -63,7 +63,7 @@ a {
 
 #boardBody{
   width: 75vw;
-  height: 40vh;
+  height: 25vh;
   margin: auto;
   margin: 0;
   padding:2vw;
@@ -75,7 +75,7 @@ a {
 }
 #boardFoot{
   width: 75vw;
-  height: 30vh;
+  height: 25vh;
   margin: auto;
   margin: 0;
   padding:2vw;
