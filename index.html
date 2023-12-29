@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comdocu</title>
+    <link rel="stylesheet" href="index.css"/>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+    </style>
 </head>
 <body>
-  <div id="root">
-    <div id="sidevar"></div>
-    <div id="board"></div>
-  </div>
-  <script></script>
+    <div id="root"></div>
+    <script type="module">
+        import { createElement, component, render } from './component.js'
+        const stateData = [
+            { hash: '#김우진', text: '김우진' },
+            { hash: '#',  text: 'cpu'  },
+            { hash: '#m/b',  text: 'm/b'  },
+            { hash: '#p/w',  text: 'p/w'  },
+            { hash: '#ram',  text: 'ram'  },
+            { hash: '#ssd',  text: 'ssd'  },
+            { hash: '#odd',  text: 'odd'  },
+            { hash: '#hdd',  text: 'hdd'  },
+            { hash: '#gpu',  text: 'gpu'  },
+        ];
+      
+    const div = 
+    createElement("div", {id:"bigcont"}, 
+          createElement("div", {id:"leftside" }, component(stateData)
+            ),
+          createElement("div", {id:"middle" }, 
+            ),
+          createElement("div", {id:"rightside" }, "" ),
+        )
+
+    const contentDiv = document.getElementById('root');
+    contentDiv.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
+    
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.substr(1);
+      const body = document.getElementById('body')
+      body.innerHTML = ""
+      
+      switch (hash) {
+        case 'login' : 
+        const loginBody = 
+        createElement("div", {class:"hashBody", }        )
+        body.appendChild(render(loginBody));
+          break;
+        case 'signup' : 
+        const signupBody = 
+        createElement("div", {class:"hashBody", },        )
+        body.appendChild(render(signupBody));
+          break;
+        default : 
+          break
+      }
+    }); 
+    // window.dispatchEvent(new Event('hashchange'));
+    window.dispatchEvent(new Event('DOMContentLoaded'));
+
+  </script>
 </body>
 </html>
