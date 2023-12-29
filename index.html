@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comdocu</title>
-    <link rel="stylesheet" href="index.css"/>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comdocu</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="root"></div>
-    <script type="module">
-        import { createElement, component, render } from './component.js'
-        const stateData = [
-            { hash: '#김우진', text: '김우진' },
-            { hash: '#',  text: 'cpu'  },
-            { hash: '#m/b',  text: 'm/b'  },
-            { hash: '#p/w',  text: 'p/w'  },
-            { hash: '#ram',  text: 'ram'  },
-            { hash: '#ssd',  text: 'ssd'  },
-            { hash: '#odd',  text: 'odd'  },
-            { hash: '#hdd',  text: 'hdd'  },
-            { hash: '#gpu',  text: 'gpu'  },
-        ];
-      
-    const div = 
-    createElement("div", {id:"bigcont"}, 
-          createElement("div", {id:"leftside" }, component(stateData)
-            ),
-          createElement("div", {id:"middle" }, 
-            ),
-          createElement("div", {id:"rightside" }, "" ),
-        )
+  <div id="root"></div>
+  <script type="module">
+      import { createElement, component, render } from './component.js'
+    const stateData = [
+      { hash: '#Kimwoojin', text: '김우진', content: "kimwoojin content"},
+      { hash: '#Kimhyun', text: '김현' , content: "kimwoojin content"},
+      { hash: '#Bangseunhee', text: '방승희' , content: "kimwoojin content"},
+      { hash: '#Byunhonyung', text: '변호녕' , content: "kimwoojin content"},
+      { hash: '#Sosamuel', text: '소사무엘' , content: "kimwoojin content"},
+      { hash: '#Songyoungjun', text: '송영준' , content: "kimwoojin content"},
+      { hash: '#Sindonghyun', text: '신동현' , content: "kimwoojin content"},
+      { hash: '#Ohseungmin', text: '오승민' , content: "kimwoojin content"},
+      { hash: '#Yuseungmin', text: '유승민' , content: "kimwoojin content"},
+      { hash: '#Yunjunhyun', text: '윤준현' , content: "kimwoojin content"},
+      { hash: '#Leemingu', text: '이민구' , content: "kimwoojin content"},
+      { hash: '#Leeyuan', text: '이유안' , content: "kimwoojin content"},
+      { hash: '#Leechayee', text: '이채이' , content: "kimwoojin content"},
+      { hash: '#Junngyoungsick', text: '정영식' , content: "kimwoojin content"},
+      { hash: '#Choisungmin', text: '최성민' , content: "kimwoojin content"},
+      { hash: '#Choieunchul', text: '최은철' , content: "kimwoojin content"},
+      { hash: '#Hongmoongi', text: '홍문기' , content: "kimwoojin content"},
+    ];
 
-    const contentDiv = document.getElementById('root');
-    contentDiv.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
-    
+    const div =
+      createElement("div", { id: "bigcont" },
+        createElement("div", { id: "leftside" }, component(stateData)),
+        createElement("div", { id: "middle" }),
+      )
 
+    const root = document.getElementById('root');
+    root.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
+
+    window.dispatchEvent(new Event('DOMContentLoaded'));
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.substr(1);
-      const body = document.getElementById('body')
-      body.innerHTML = ""
-      
+      const middle = document.getElementById('middle')
+      middle.innerHTML = ""
+
       switch (hash) {
-        case 'login' : 
-        const loginBody = 
-        createElement("div", {class:"hashBody", }        )
-        body.appendChild(render(loginBody));
+
+        case 'Kimwoojin':
+          const Kimwoojin =
+            createElement("div", { id: stateData[0].text, class:"middleCont" },
+              createElement("div", { class: "top" },
+                createElement("h1", {}, stateData[0].text),
+                createElement("p", {}, stateData[0].content),
+              ),
+              createElement("div", { class: "middle" },
+                createElement("h1", {}, stateData[0].text + "장정"),
+                createElement("p", {}, stateData[0].content),
+              ),
+              createElement("div", { class: "bottom" },
+                createElement("input", {id:"inputTag", placeholder:"write your name"}, ),
+                createElement("div", {}, `${document.getElementById("inputTag").value}`)
+              ),
+            )
+          middle.appendChild(render(Kimwoojin));
           break;
-        case 'signup' : 
-        const signupBody = 
-        createElement("div", {class:"hashBody", },        )
-        body.appendChild(render(signupBody));
+        hashComp(1)
           break;
-        default : 
-          break
+        default:
+          const first =
+            createElement("div", {},)
+          middle.appendChild(render(first));
+          break;
       }
-    }); 
+    });
     // window.dispatchEvent(new Event('hashchange'));
-    window.dispatchEvent(new Event('DOMContentLoaded'));
+
 
   </script>
+  <script>
+    
+  </script>
 </body>
+
 </html>
