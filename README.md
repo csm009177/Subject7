@@ -8,22 +8,12 @@ SUMMARY
 3. 
 
 DIRECTORY
-graph LR
-
-App
-├── node_modules
-│   ├── react
-│   ├── react-dom
-│   └── bootstrap
-├── public
-│   └── index.html
-├── manifest.json
-├── robots.txt
-└── src
-    ├── App.css
-    ├── App.js
-    ├── data.js
-    ├── Example.js
-    ├── index.css
-    ├── index.js
-    └── logo.svg
+├─public
+│ └─ index.html
+└─src
+  ├─ App.css
+  ├─ App.js
+  ├─ data.js
+  ├─ index.css
+  ├─ index.js
+  └─ SideComponent.js
