@@ -34,67 +34,14 @@
 
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.substr(1);
-      const middle = document.getElementById('middle')
-      middle.innerHTML = ""
+      const middle = document.getElementById('middle');
+      middle.innerHTML = "";
 
-      switch (hash) {
-
-
-        case `${stateData[0].hash.substr(1)}` :
-          hashCompo(0)
-        break;
-        case `${stateData[1].hash.substr(1)}` :
-          hashCompo(1)
-        break;
-        case `${stateData[2].hash.substr(1)}` :
-          hashCompo(2)
-        break;
-        case `${stateData[3].hash.substr(1)}` :
-          hashCompo(3)
-        break;
-        case `${stateData[4].hash.substr(1)}` :
-          hashCompo(4)
-        break;
-        case `${stateData[5].hash.substr(1)}` :
-          hashCompo(5)
-        break;
-        case `${stateData[6].hash.substr(1)}` :
-          hashCompo(6)
-        break;
-        case `${stateData[7].hash.substr(1)}` :
-          hashCompo(7)
-        break;
-        case `${stateData[8].hash.substr(1)}` :
-          hashCompo(8)
-        break;
-        case `${stateData[9].hash.substr(1)}` :
-          hashCompo(9)
-        break;
-        case `${stateData[10].hash.substr(1)}` :
-          hashCompo(10)
-        break;
-        case `${stateData[11].hash.substr(1)}` :
-          hashCompo(11)
-        break;
-        case `${stateData[12].hash.substr(1)}` :
-          hashCompo(12)
-        break;
-        case `${stateData[13].hash.substr(1)}` :
-          hashCompo(13)
-        break;
-        case `${stateData[14].hash.substr(1)}` :
-          hashCompo(14)
-        break;
-        case `${stateData[15].hash.substr(1)}` :
-          hashCompo(15)
-        break;
-        case `${stateData[16].hash.substr(1)}` :
-          hashCompo(16)
-        break;
-        case `${stateData[17].hash.substr(1)}` :
-          hashCompo(17)
-        break;
-
+      for (let i = 0; i < stateData.length; i++) {
+        if (hash === stateData[i].hash.substr(1)) {
+          hashCompo(i);
+          break;  // 해당 조건이 충족되면 루프를 종료합니다.
+        }
       }
     });
     // window.dispatchEvent(new Event('hashchange'));
