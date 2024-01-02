@@ -8,9 +8,14 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "OVERVIEW\r REACT AND NEXT 활용한 클레스메이트 소개 페이지",
   "dependencies": {
     "create-react-app": "^5.0.1",
-    "react-scripts": "^5.0.1"
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.5.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }

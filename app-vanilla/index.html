@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roomate</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module">
+    import { createElement, component, render, hashCompo, stateData, strData } from './component.js'
+
+    console.log(stateData.length)
+
+    const div =
+      createElement("div", { id: "bigcont" },
+        createElement("div", { id: "leftside" }, component(stateData)),
+        createElement("div", { id: "middle" }),
+      )
+
+    const root = document.getElementById('root');
+    root.appendChild(render(div)); // dom을 렌더해서 대상에 어펜드 하기
+
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.substr(1);
+      const middle = document.getElementById('middle');
+      middle.innerHTML = "";
+
+      for (let i = 0; i < stateData.length; i++) {
+        if (hash === stateData[i].hash.substr(1)) {
+          hashCompo(i);
+          break;  // 해당 조건이 충족되면 루프를 종료합니다.
+        }
+      }
+    });
+    // window.dispatchEvent(new Event('hashchange'));
+    // window.dispatchEvent(new Event('DOMContentLoaded'));
+
+  </script>
+  <script>
+
+  </script>
+</body>
+
+</html>

@@ -14,6 +14,15 @@ code {
     monospace;
 }
 
+#bigcont{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;  
+}
+
 #side {
   width: 25vw;
   height: 100vh;
@@ -72,12 +81,10 @@ code {
 #boardFoot{
   width: 75vw;
   height: 30vh;
-
-  margin: 0;
-  /* padding:2vw; */
+  margin: 0vw;
+  padding:7vw;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  justify-content: space-between;
   text-decoration-line: none;
 }
