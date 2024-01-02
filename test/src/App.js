@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {stateData,strData } from './data.js'
-
+import {stateData, strData} from './data.js'
 
 const App = () => {
   const [inputValue, setInputValue] = useState('');
