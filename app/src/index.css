@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#side {
+  width: 25vw;
+  height: 100vh;
+}
+#sideUl {
+  margin: auto;
+  margin: 0;
+  padding:2vw;
+  width: 25vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+  text-align: center;
+  list-style: none;
+}
+
+#board {
+  width: 75vw;
+  height: 100vh;
+  margin: auto;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+#boardHead{
+  width: 75vw;
+  height: 40vh;
+
+  margin: 0;
+  /* padding:2vw; */
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+
+#boardBody{
+  width: 75vw;
+  height: 30vh;
+
+  margin: 0;
+  /* padding:2vw; */
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
+#boardFoot{
+  width: 75vw;
+  height: 30vh;
+
+  margin: 0;
+  /* padding:2vw; */
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration-line: none;
+}
