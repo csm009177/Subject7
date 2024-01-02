@@ -42,8 +42,7 @@ const SideComponent = () => {
   return (
     <ul id="sideUl">
       {stateData.map((item, index) => (
-        <li key={index}>
-          {/* 클릭 이벤트에 handlesideButtonClick 함수를 연결합니다. */}
+        <li key={index} id={item.text+"liTag"} >
           <a href={item.hash} onClick={handlesideButtonClick}>{item.text}</a>
         </li>
       ))}
