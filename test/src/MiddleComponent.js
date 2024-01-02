@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { stateData } from './data.js';
+import React, {useState } from "react";
+import { stateData,strData } from "./data.js";
+import {createElement, render, hashCompo} from './Component.js'
+
 
 const MiddleComponent = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value.trim());
@@ -18,16 +20,20 @@ const MiddleComponent = () => {
   };
 
   return (
-    <div id="middle">
-      <input 
-        id="inputTag" 
-        placeholder="write your name" 
-        value={inputValue}
-        onChange={handleInputChange}
-      />
-      <button id="button" onClick={handleButtonClick}>
-        show
-      </button>
+    <div id="board">
+      <div id="boardHead"></div>
+      <div id="boardBody"></div>
+      <div id="boardFoot">
+        <input
+          id="inputTag"
+          placeholder="write your name"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+        <button id="button" onClick={handleButtonClick}>
+          show
+        </button>
+      </div>
     </div>
   );
 };

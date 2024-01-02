@@ -4,11 +4,11 @@ import MiddleComponent from './MiddleComponent';
 
 const App = () => {
   return (
-    <div id="side">
+    <div id="bigcont">
       {/* 상태 데이터를 사용하여 메뉴 생성 */}
-      <SideComponent />
+      <div id ="side"><SideComponent /></div>
       {/* 해시 컴포넌트 */}
-      <MiddleComponent />
+      <div id="board"><MiddleComponent /></div>
     </div>
   );
 };
