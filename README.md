@@ -8,7 +8,9 @@ SUMMARY
 3. 
 
 DIRECTORY
-my-app/
+
+
+app/
 ├── node_modules/       # npm 패키지들이 저장되는 디렉토리
 ├── public/             # 정적 파일들(HTML, favicon, manifest 등)을 포함하는 디렉토리
 │   ├── index.html      # 기본 HTML 파일
