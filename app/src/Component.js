@@ -23,19 +23,29 @@ export function SideComponent() {
   const appendOrUpdatefoot = (cont) => {
     let input = cont.querySelector("input");
     let button = cont.querySelector("button");
-
+    
     if (!input) {
-      const input = document.createElement("input");
-      input.placeholder = "type here"
+      input = document.createElement("input");  // const 제거하여 변수 재할당
+      input.placeholder = "type here";
       cont.appendChild(input);
     }
-
+  
     if (!button) {
-      const button = document.createElement("button");
-      button.innerHTML = "show"
+      button = document.createElement("button");  // const 제거하여 변수 재할당
+      button.innerHTML = "show";
+      button.addEventListener('click', () => {
+        const inputValue = input.value;  // input.value로 수정
+        console.log(inputValue);
+        const matchedItem = stateData.find(item => item.text === inputValue);
+    
+        // if (matchedItem) {
+          window.location.hash = matchedItem.hash;
+        // } else {
+        //   alert("일치하는 이름을 찾을 수 없습니다.");
+        // }
+      });
       cont.appendChild(button);
     }
-
   };
 
   const boardChange = (text) => {
@@ -46,7 +56,6 @@ export function SideComponent() {
     appendOrUpdateContent(boardHead, text, strData[0].str1);
     appendOrUpdateContent(boardBody, `${text} 장점`, strData[0].str2);
     appendOrUpdatefoot(boardFoot)
-
   };
 
   return (
