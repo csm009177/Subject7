@@ -2,6 +2,7 @@ import React from "react";
 import { stateData, strData } from "./data.js";
 
 export function SideComponent() {
+
   const appendOrUpdateContent = (cont, text, contentstr) => {
     let title = cont.querySelector("h1");
     let content = cont.querySelector("p");
@@ -18,21 +19,23 @@ export function SideComponent() {
     }
     content.innerHTML = contentstr;
   };
-  const appendOrUpdatefoot = (cont, text, contentstr) => {
-    let title = cont.querySelector("h1");
-    let content = cont.querySelector("p");
 
-    if (!title) {
-      title = document.createElement("h1");
-      cont.appendChild(title);
-    }
-    title.innerHTML = text;
+  const appendOrUpdatefoot = (cont) => {
+    let input = cont.querySelector("input");
+    let button = cont.querySelector("button");
 
-    if (!content) {
-      content = document.createElement("p");
-      cont.appendChild(content);
+    if (!input) {
+      const input = document.createElement("input");
+      input.placeholder = "type here"
+      cont.appendChild(input);
     }
-    content.innerHTML = contentstr;
+
+    if (!button) {
+      const button = document.createElement("button");
+      button.innerHTML = "show"
+      cont.appendChild(button);
+    }
+
   };
 
   const boardChange = (text) => {
@@ -42,11 +45,7 @@ export function SideComponent() {
 
     appendOrUpdateContent(boardHead, text, strData[0].str1);
     appendOrUpdateContent(boardBody, `${text} 장점`, strData[0].str2);
-    const input = document.createElement("input")
-    const output = document.createElement("p")
-    output.innerHTML = input.value
-    boardFoot.appendChild(input)
-    boardFoot.appendChild(output)
+    appendOrUpdatefoot(boardFoot)
 
   };
 
