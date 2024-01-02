@@ -38,11 +38,11 @@ export function SideComponent() {
         console.log(inputValue);
         const matchedItem = stateData.find(item => item.text === inputValue);
     
-        // if (matchedItem) {
+        if (matchedItem) {
           window.location.hash = matchedItem.hash;
-        // } else {
-        //   alert("일치하는 이름을 찾을 수 없습니다.");
-        // }
+        } else {
+          alert("일치하는 이름을 찾을 수 없습니다.");
+        }
       });
       cont.appendChild(button);
     }
