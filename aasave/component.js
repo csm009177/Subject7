@@ -94,11 +94,11 @@ export function hashCompo(index) {
   );
   middle.appendChild(render(middlebody));
 
-  // button 클릭 이벤트 처리
+  // button click event handling
   const button = document.getElementById("button");
   button.addEventListener("click", function () {
     const inputTag = document.getElementById("inputTag");
-    const inputValue = inputTag.value.trim(); // 입력 값 가져오기 및 공백 제거
+    const inputValue = inputTag.value.trim(); // bring input value and delete empty space
 
     // stateData에서 inputValue와 일치하는 text 찾기
     const matchedItem = stateData.find((item) => item.text === inputValue);
